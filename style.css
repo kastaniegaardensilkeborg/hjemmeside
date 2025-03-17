@@ -112,10 +112,11 @@ pre {
 
 /* Style for the left pane header on small screens */
 @media (max-width: 768px) {
-    .left-pane h2 {
+    .left-pane .header {
         display: flex;
         align-items: center; /* Vertically center the items */
-        justify-content: space-between; /* Space out the burger menu and "Navigation" */
+        justify-content: flex-start; /* Align items to the left */
+        gap: 10px; /* Add space between the burger menu and "Navigation" */
         margin: 0; /* Remove default margin */
         padding: 10px 0; /* Add some padding */
     }
