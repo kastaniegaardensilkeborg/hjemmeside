@@ -8,16 +8,19 @@
     <style>
         /* CSS til mobilnavigation */
         .left-pane {
-            width: 100%;
-            display: none; /* Skjul navigationen som standard på små skærme */
+            width: 200px;
         }
 
-        .left-pane.mobile-open {
-            display: block; /* Vis navigationen, når den er åben */
+        .right-pane {
+            margin-left: 200px;
+        }
+
+        .left-pane.mobile-hidden {
+            display: none;
         }
 
         .nav-toggle {
-            display: block; /* Vis toggle-knappen på små skærme */
+            display: none;
             background-color: #333;
             color: white;
             padding: 10px;
@@ -25,14 +28,27 @@
             cursor: pointer;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .left-pane {
-                width: 200px; /* Vis navigationen som normalt på større skærme */
-                display: block;
+                width: 100%;
+                position: absolute;
+                top: 50px; /* Juster efter behov */
+                left: 0;
+                z-index: 10;
+                background-color: white; /* Eller en anden baggrundsfarve */
+            }
+
+            .right-pane {
+                margin-left: 0;
+                padding-top: 50px; /* Tilpas til højden af nav-toggle */
+            }
+
+            .left-pane.mobile-hidden {
+                display: none;
             }
 
             .nav-toggle {
-                display: none; /* Skjul toggle-knappen på større skærme */
+                display: block;
             }
         }
     </style>
@@ -58,32 +74,76 @@
 </div>
 
 <div class="right-pane">
+    <div id="budgetter" class="content-section">
+        <h2>Budgetter</h2>
+        <p>Her finder du Kastaniegårdens budgetter.</p>
+        <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se budgetterne, skal du blot klikke på dette link:</p>
+        <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens budgetter</a></p>
+        <p>Kodeordet er uændret i forhold til tidligere.</p>
     </div>
 
-<script>
-    const navItems = document.querySelectorAll('.nav-item');
-    const contentSections = document.querySelectorAll('.content-section');
-    const nav = document.getElementById('nav');
+    <div id="gaver" class="content-section">
+        <h2>Gaver</h2>
+        <p>Som vedtaget på generalforsamling den 20. november 2018, giver foreningen en lille gave til andelshavere ved følgende lejligheder:</p>
+        <ul>
+            <li>Runde fødselsdage fra og med 30 år, dvs. 30, 40, 50, osv. års fødselsdage</li>
+            <li>Sygdom, der forårsager hospitalsindlæggelse</li>
+        </ul>
+        <p>Gavebudgettet er cirka 200,- kr, og bestyrelsen sørger for indkøb af passende gave.</p>
+    </div>
+    <div id="haandvaerker" class="content-section">
+        <h2>Akut håndværkerliste</h2>
+        <p>Nedenstående er en liste over håndværkere, som kan kontaktes i tilfælde af akut opstået skade på vvs-installationer, el-installationer, ventilationsanlæg, eller tagsten.</p>
+        <p>Er du i tvivl om, hvem der har ansvaret for en opstået skade, så se venligst i vedligeholdelseskataloget, eller kontakt bestyrelsen.</p>
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const sectionId = item.dataset.section;
+        <h3>Vand / Varme / Sanitet</h3>
+        <p>Silkeborg VVS-Teknik ApS<br>
+            Thorupgårdsvej 30<br>
+            8600 Silkeborg<br>
+            Tlf. 86 85 18 97<br>
+            Mob. 40 54 05 93</p>
 
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
+        <h3>Tagsten</h3>
+        <p>Tømreren Lysbro<br>
+            Lysbrogade 41<br>
+            8600 Silkeborg<br>
+            Tlf. 86 82 52 36<br>
+            Mob. 40 85 42 36</p>
 
-            document.getElementById(sectionId).classList.add('active');
-            if (window.innerWidth < 768) {
-                toggleNav();
-            }
-        });
-    });
+        <h3>Elektriske installationer</h3>
+        <p>Kragelund El A/S<br>
+            Balle Bygade 28<br>
+            8600 Silkeborg<br>
+            Tlf. 86 86 71 32<br>
+            Mob. 40 36 76 20</p>
 
-    function toggleNav() {
-        nav.classList.toggle('mobile-open');
-    }
-</script>
+        <h3>Vand og varme (Silkeborg Forsyning)</h3>
+        <p><a href="https://www.silkeborgforsyning.dk/" target="_blank">Silkeborg Forsyning (hjemmeside)</a><br>
+            Tietgensvej 3<br>
+            8600 Silkeborg<br>
+            Tlf. 89 20 64 00</p>
+        <p>Forsyningen tilbyder en gratis SMS-service, der oplyser om planlagte driftforstyrrelser vedrørende vandforsyning eller fjernvarme. Man kan tilmelde sig på <a href="https://www.silkeborgforsyning.dk/" target="_blank">denne side</a>.</p>
 
-</body>
-</html>
+        <h3>Elektricitet (EnergiMidt)</h3>
+        <p><a href="https://www.energiMidt.dk/" target="_blank">EnergiMidt (hjemmeside)</a><br>
+            Tietgensvej 4<br>
+            8600 Silkeborg<br>
+            Tlf. 70 15 15 40</p>
+    </div>
+
+    <div id="kobsalg" class="content-section">
+        <h2>Køb og salg</h2>
+        <p>Indsæt information om køb og salg her.</p>
+    </div>
+
+    <div id="moderreferater" class="content-section">
+        <h2>Mødereferater</h2>
+        <p>Her finder du dagsorden og referat fra møder afholdt i foreningen.</p>
+        <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se dagsordener og referater, skal du blot klikke på dette link:</p>
+        <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens dagsordener og mødereferater</a></p>
+        <p>Kodeordet er uændret i forhold til tidligere.</p>
+    </div>
+
+    <div id="om" class="content-section">
+        <h2>Om Kastaniegården</h2>
+        <p>Andelsboligforeningen Kastaniegården blev oprettet og bygget på eget initiativ af en gruppe mennesker i Silkeborg i 1983-84. Via en arkitekt, blev der udfærdiget et oplæg til 8 boliger
