@@ -1,65 +1,162 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Velkommen til Kastaniegården</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+<title>Velkommen til Kastaniegården</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu">
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+<div class="left-pane">
+    <h2>Navigation</h2>
+    <div class="nav-item" data-section="haandvaerker">Akut håndværkerliste</div>
+    <div class="nav-item" data-section="budgetter">Budgetter</div>
+    <div class="nav-item" data-section="gaver">Gaver</div>
+    <div class="nav-item" data-section="kobsalg">Køb og salg</div>
+    <div class="nav-item" data-section="moderreferater">Mødereferater</div>
+    <div class="nav-item" data-section="om">Om Kastaniegården</div>
+    <div class="nav-item" data-section="regnskaber">Regnskaber</div>
+    <div class="nav-item" data-section="vedligeholdelse">Vedligeholdelseskatalog</div>
+    <div class="nav-item" data-section="vedtaegter">Vedtægter</div>
+    <div class="nav-item" data-section="velkommen">Velkommen til Kastaniegården</div>
+    <a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/" class="nav-item" target="_blank">Læs mere</a>
+</div>
+
+<div class="right-pane">
+<div id="budgetter" class="content-section">
+    <h2>Budgetter</h2>
+    <p>Her finder du Kastaniegårdens budgetter.</p>
+    <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se budgetterne, skal du blot klikke på dette link:</p>
+    <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens budgetter</a></p>
+    <p>Kodeordet er uændret i forhold til tidligere.</p>
+</div>
+
+<div id="gaver" class="content-section">
+    <h2>Gaver</h2>
+    <p>Som vedtaget på generalforsamling den 20. november 2018, giver foreningen en lille gave til andelshavere ved følgende lejligheder:</p>
+    <ul>
+        <li>Runde fødselsdage fra og med 30 år, dvs. 30, 40, 50, osv. års fødselsdage</li>
+        <li>Sygdom, der forårsager hospitalsindlæggelse</li>
+    </ul>
+    <p>Gavebudgettet er cirka 200,- kr, og bestyrelsen sørger for indkøb af passende gave.</p>
+</div>
+
+<div id="haandvaerker" class="content-section">
+    <h2>Akut håndværkerliste</h2>
+    <p>Nedenstående er en liste over håndværkere, som kan kontaktes i tilfælde af akut opstået skade på vvs-installationer, el-installationer, ventilationsanlæg, eller tagsten.</p>
+    <p>Er du i tvivl om, hvem der har ansvaret for en opstået skade, så se venligst i vedligeholdelseskataloget, eller kontakt bestyrelsen.</p>
+
+    <h3>Vand / Varme / Sanitet</h3>
+    <p>Silkeborg VVS-Teknik ApS<br>
+    Thorupgårdsvej 30<br>
+    8600 Silkeborg<br>
+    Tlf. 86 85 18 97<br>
+    Mob. 40 54 05 93</p>
+
+    <h3>Tagsten</h3>
+    <p>Tømreren Lysbro<br>
+    Lysbrogade 41<br>
+    8600 Silkeborg<br>
+    Tlf. 86 82 52 36<br>
+    Mob. 40 85 42 36</p>
+
+    <h3>Elektriske installationer</h3>
+    <p>Kragelund El A/S<br>
+    Balle Bygade 28<br>
+    8600 Silkeborg<br>
+    Tlf. 86 86 71 32<br>
+    Mob. 40 36 76 20</p>
+
+    <h3>Vand og varme (Silkeborg Forsyning)</h3>
+    <p><a href="https://www.silkeborgforsyning.dk/" target="_blank">Silkeborg Forsyning (hjemmeside)</a><br>
+    Tietgensvej 3<br>
+    8600 Silkeborg<br>
+    Tlf. 89 20 64 00</p>
+    <p>Forsyningen tilbyder en gratis SMS-service, der oplyser om planlagte driftforstyrrelser vedrørende vandforsyning eller fjernvarme. Man kan tilmelde sig på <a href="https://www.silkeborgforsyning.dk/" target="_blank">denne side</a>.</p>
+
+    <h3>Elektricitet (EnergiMidt)</h3>
+    <p><a href="https://www.energiMidt.dk/" target="_blank">EnergiMidt (hjemmeside)</a><br>
+    Tietgensvej 4<br>
+    8600 Silkeborg<br>
+    Tlf. 70 15 15 40</p>
+</div>
+
+    <div id="kobsalg" class="content-section">
+        <h2>Køb og salg</h2>
+        <p>Indsæt information om køb og salg her.</p>
     </div>
-    <div class="nav-items-mobile">
-        <div class="nav-item" data-section="haandvaerker">Akut håndværkerliste</div>
-        <div class="nav-item" data-section="budgetter">Budgetter</div>
-        <div class="nav-item" data-section="gaver">Gaver</div>
-        <div class="nav-item" data-section="kobsalg">Køb og salg</div>
-        <div class="nav-item" data-section="moderreferater">Mødereferater</div>
-        <div class="nav-item" data-section="om">Om Kastaniegården</div>
-        <div class="nav-item" data-section="regnskaber">Regnskaber</div>
-        <div class="nav-item" data-section="teknik">Teknik til webmaster</div>
-        <div class="nav-item" data-section="vedligeholdelse">Vedligeholdelseskatalog</div>
-        <div class="nav-item" data-section="vedtaegter">Vedtægter</div>
-        <div class="nav-item" data-section="velkommen">Velkommen til Kastaniegården</div>
-        <a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/" class="nav-item" target="_blank">Læs mere</a>
+
+<div id="moderreferater" class="content-section">
+    <h2>Mødereferater</h2>
+    <p>Her finder du dagsorden og referat fra møder afholdt i foreningen.</p>
+    <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se dagsordener og referater, skal du blot klikke på dette link:</p>
+    <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens dagsordener og mødereferater</a></p>
+    <p>Kodeordet er uændret i forhold til tidligere.</p>
+</div>
+
+<div id="om" class="content-section">
+    <h2>Om Kastaniegården</h2>
+    <p>Andelsboligforeningen Kastaniegården blev oprettet og bygget på eget initiativ af en gruppe mennesker i Silkeborg i 1983-84. Via en arkitekt, blev der udfærdiget et oplæg til 8 boliger, og efter at have fået del i byggekvoten fra ministeriet, var projektet i gang.</p>
+    <p>Da vi selv var bygherre, havde vi stor indflydelse på valg af byggematerialer, og dermed de fremtidige vedligeholdelsesudgifter. Efter en god licitation, kunne vi endog få indlagt mekanisk ventilation i husene.</p>
+    <p>Årene har bevist, at bygningernes kvalitet og pris var rigtig, og vi har derfor de forventede, lave vedligeholdelsesudgifter. Dog har vi været uheldig med dårligt brændte teglsten, hvorfor taget blev udskiftet i 2010.</p>
+    <p>Foreningen styres af en bestyrelse, der via vedtægter og aftaler står for den daglige drift. Ved interesse, kan regnskab m.v. udleveres.</p>
+    <p>Byggeriet ligger på Malmøvej i Silkeborg Nord, med gode busforbindelser til byen. Der er kort afstand til skoler, børneinstitutioner og dagligvarehandel via sti-system.</p>
+</div>
+
+<div id="regnskaber" class="content-section">
+    <h2>Regnskaber</h2>
+    <p>Her finder du foreningens regnskaber siden 2007.</p>
+    <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se regnskaberne, skal du blot klikke på dette link:</p>
+    <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens regnskaber</a></p>
+    <p>Kodeordet er uændret i forhold til tidligere.</p>
+</div>
+
+<div id="vedligeholdelse" class="content-section">
+    <h2>Vedligeholdelseskatalog</h2>
+    <p>Her finder du foreningens vedligeholdelseskatalog, som beskriver, hvilke vedligeholdelsesopgaver, der påhviler den enkelte andelshaver, samt hvilke der påhviler foreningen.</p>
+    <p>Af vedligeholdelsesmæssige årsager er kataloget flyttet til OneDrive. For at åbne det, skal du blot klikke på linket nedenfor.</p>
+    <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens vedligeholdelseskatalog</a></p>
+    <p>Vedtaget den 24. september 2019, opdateret på denne side den 29. september 2019.</p>
+</div>
+
+<div id="vedtaegter" class="content-section">
+    <h2>Vedtægter</h2>
+    <p>Her finder du foreningens vedtægter i seneste vedtagne udgave.</p>
+    <p>Af sikkerhedsmæssige årsager er dokumenterne blevet flyttet fra denne side til OneDrive. For at se vedtægterne, skal du blot klikke på dette link:</p>
+    <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens vedtægter</a></p>
+    <p>Kodeordet er uændret i forhold til tidligere.</p>
+    <p>Vedtaget på foreningens ordinære generalforsamling den 14. juni 2021, opdateret på denne side den 19. juni 2021.</p>
+</div>
+
+    <div id="velkommen" class="content-section active">
+        <h1>Velkommen til Kastaniegården</h1>
+        <p>Kastaniegården er en andelsboligforening beliggende i det nordlige Silkeborg. Foreningen blev grundlagt i 1984, og består af otte huse.</p>
+        <img src="Kastaniegaarden.png" />
+        <p>I menuen til venstre finder du diverse information vedrørende foreningen, bl.a. lidt historie om foreningen tilblivelse, billeder, vedtægter og mødereferater.</p>
+        <p>Hvis du vil i kontakt med foreningen, kan du skrive til os på adressen:</p>
+        <pre>kastaniegaardensilkeborg snabel-a gmail punktum com</pre>
+        <p><a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/">Læs mere om Kastaniegården.</a></p>
     </div>
 </div>
 
-<!-- Desktop Navigation and Content -->
-<div class="container">
-    <div class="left-pane">
-        <h2>Navigation</h2>
-        <div class="nav-item" data-section="haandvaerker">Akut håndværkerliste</div>
-        <div class="nav-item" data-section="budgetter">Budgetter</div>
-        <div class="nav-item" data-section="gaver">Gaver</div>
-        <div class="nav-item" data-section="kobsalg">Køb og salg</div>
-        <div class="nav-item" data-section="moderreferater">Mødereferater</div>
-        <div class="nav-item" data-section="om">Om Kastaniegården</div>
-        <div class="nav-item" data-section="regnskaber">Regnskaber</div>
-        <div class="nav-item" data-section="teknik">Teknik til webmaster</div>
-        <div class="nav-item" data-section="vedligeholdelse">Vedligeholdelseskatalog</div>
-        <div class="nav-item" data-section="vedtaegter">Vedtægter</div>
-        <div class="nav-item" data-section="velkommen">Velkommen til Kastaniegården</div>
-        <a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/" class="nav-item" target="_blank">Læs mere</a>
-    </div>
+<script>
+    const navItems = document.querySelectorAll('.nav-item');
+    const contentSections = document.querySelectorAll('.content-section');
 
-    <div class="right-pane">
-        <!-- Content Sections (Same as before) -->
-        <div id="budgetter" class="content-section">
-            <h2>Budgetter</h2>
-            <p>Her finder du Kastaniegårdens budgetter.</p>
-            <p><a href="DIN_ONEDRIVE_LINK_HER" target="_blank">Kastaniegårdens budgetter</a></p>
-        </div>
-        <!-- Add other content sections here -->
-    </div>
-</div>
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const sectionId = item.dataset.section;
 
-<script src="script.js"></script>
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            document.getElementById(sectionId).classList.add('active');
+        });
+    });
+</script>
+
 </body>
 </html>
