@@ -1,4 +1,3 @@
-/* General body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -10,18 +9,14 @@ body {
     font-size: 120%;
 }
 
-/* Left pane styles */
 .left-pane {
     width: 280px;
     background-color: #e9ecef;
     padding: 30px 20px;
     box-sizing: border-box;
     border-right: 1px solid #dee2e6;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Right pane styles */
 .right-pane {
     flex: 1;
     padding: 30px;
@@ -79,53 +74,20 @@ pre {
     overflow-x: auto;
 }
 
-/* Header alignment for small screens */
 @media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
     .left-pane {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #dee2e6;
-        padding: 15px 10px;
     }
 
     .right-pane {
-        padding: 15px;
+        padding: 20px;
     }
-
-    .left-pane .header {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        margin: 0;
-        padding: 0; /* Remove padding to align with the right pane */
-    }
-
-    .left-pane h2 {
-        margin: 0; /* Remove margin to align with the right pane */
-    }
-
-    #burger-menu {
-        display: block;
-        margin: 0;
-    }
-
-    #nav-items {
-        display: none;
-    }
-
-    #nav-items.active {
-        display: block;
-    }
-
-    .left-pane, .right-pane {
-        padding-top: 15px; /* Adjust for smaller screens */
-    }
-}
-
-/* Ensure the top alignment of the left and right panes */
-.left-pane, .right-pane {
-    padding-top: 30px; /* Match the padding at the top */
 }
 
 @media (max-width: 480px){
