@@ -99,3 +99,41 @@ pre {
     }
 }
 
+/* Hide the burger menu on larger screens */
+#burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Collapse the menu on small screens */
+@media (max-width: 768px) {
+    #burger-menu {
+        display: block;
+    }
+
+    #nav-items {
+        display: none; /* Hide the nav items by default */
+    }
+
+    #nav-items.active {
+        display: block; /* Show the nav items when active */
+    }
+
+    .left-pane {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        padding: 15px 10px;
+    }
+
+    .right-pane {
+        padding: 15px;
+    }
+}
+
+
