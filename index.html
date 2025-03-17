@@ -145,27 +145,31 @@
 </div>
 
 <script>
-    const navItems = document.querySelectorAll('.nav-item');
-    const contentSections = document.querySelectorAll('.content-section');
+// Variables for burger menu functionality
+const burgerMenu = document.getElementById('burger-menu');
+const navItemsContainer = document.getElementById('nav-items'); // Renamed to avoid conflict
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const sectionId = item.dataset.section;
+// Toggle the menu on small screens
+burgerMenu.addEventListener('click', () => {
+    navItemsContainer.classList.toggle('active');
+});
 
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
+// Variables for section navigation
+const navItems = document.querySelectorAll('.nav-item'); // Existing variable
+const contentSections = document.querySelectorAll('.content-section');
 
-            document.getElementById(sectionId).classList.add('active');
+// Handle section navigation
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const sectionId = item.dataset.section;
+
+        contentSections.forEach(section => {
+            section.classList.remove('active');
         });
-    });
 
-    const burgerMenu = document.getElementById('burger-menu');
-    const navItems = document.getElementById('nav-items');
-    
-    burgerMenu.addEventListener('click', () => {
-        navItems.classList.toggle('active');
+        document.getElementById(sectionId).classList.add('active');
     });
+});
 </script>
 
 </body>
