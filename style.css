@@ -32,18 +32,11 @@ body {
     color: #495057;
     cursor: pointer;
     border-radius: 6px;
-    transition: background-color 0.3s ease, border-left 0.3s ease;
-    border-left: 3px solid transparent; /* Add a transparent left border */
+    transition: background-color 0.3s ease;
 }
 
 .nav-item:hover {
     background-color: #d1d5db;
-}
-
-.nav-item.active {
-    border-left: 3px solid #007bff; /* Solid blue left border for active item */
-    background-color: #e9ecef; /* Optional: Add a background color for emphasis */
-    font-weight: bold; /* Optional: Make the text bold */
 }
 
 .content-section {
