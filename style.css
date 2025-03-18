@@ -74,6 +74,17 @@ pre {
     overflow-x: auto;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -87,6 +98,22 @@ pre {
 
     .right-pane {
         padding: 20px;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    #nav-items {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ #nav-items {
+        display: block;
+    }
+
+    .nav-item:focus ~ #nav-items {
+        display: none;
     }
 }
 
