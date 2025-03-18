@@ -1,129 +1,32 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Velkommen til Kastaniegården</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<style>
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-.left-pane {
-    width: 280px;
-    background-color: #e9ecef;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    border-right: 1px solid #dee2e6;
-}
-
-.right-pane {
-    flex: 1;
-    padding: 30px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-
-.nav-item {
-    display: block;
-    padding: 12px 15px;
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #495057;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-item:hover {
-    background-color: #d1d5db;
-}
-
-.content-section {
-    display: none;
-    padding: 20px 0;
-}
-
-.content-section.active {
-    display: block;
-}
-
-h1, h2 {
-    color: #212529;
-    margin-bottom: 20px;
-}
-
-p, pre {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-pre {
-    background-color: #f1f3f5;
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
-}
-
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .left-pane {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    .right-pane {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px){
-    .left-pane{
-        padding: 15px 10px;
-    }
-    .right-pane{
-        padding: 15px;
-    }
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="left-pane">
-    <h2>Navigation</h2>
-    <div class="nav-item" data-section="haandvaerker">Akut håndværkerliste</div>
-    <div class="nav-item" data-section="budgetter">Budgetter</div>
-    <div class="nav-item" data-section="gaver">Gaver</div>
-    <div class="nav-item" data-section="kobsalg">Køb og salg</div>
-    <div class="nav-item" data-section="moderreferater">Mødereferater</div>
-    <div class="nav-item" data-section="om">Om Kastaniegården</div>
-    <div class="nav-item" data-section="regnskaber">Regnskaber</div>
-    <div class="nav-item" data-section="vedligeholdelse">Vedligeholdelseskatalog</div>
-    <div class="nav-item" data-section="vedtaegter">Vedtægter</div>
-    <div class="nav-item" data-section="velkommen">Velkommen til Kastaniegården</div>
-    <a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/" class="nav-item" target="_blank">Læs mere</a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="burger-menu">☰</label>
+    <div id="nav-items">
+        <label for="menu-toggle" class="nav-item" data-section="haandvaerker">Akut håndværkerliste</label>
+        <label for="menu-toggle" class="nav-item" data-section="budgetter">Budgetter</label>
+        <label for="menu-toggle" class="nav-item" data-section="gaver">Gaver</label>
+        <label for="menu-toggle" class="nav-item" data-section="kobsalg">Køb og salg</label>
+        <label for="menu-toggle" class="nav-item" data-section="moderreferater">Mødereferater</label>
+        <label for="menu-toggle" class="nav-item" data-section="om">Om Kastaniegården</label>
+        <label for="menu-toggle" class="nav-item" data-section="regnskaber">Regnskaber</label>
+        <label for="menu-toggle" class="nav-item" data-section="vedligeholdelse">Vedligeholdelseskatalog</label>
+        <label for="menu-toggle" class="nav-item" data-section="vedtaegter">Vedtægter</label>
+        <label for="menu-toggle" class="nav-item" data-section="velkommen">Velkommen til Kastaniegården</label>
+        <a href="http://abkastaniegaarden.dk/index.php/om-kastaniegaarden/" class="nav-item" target="_blank">Læs mere</a>
+    </div>
 </div>
-
+    
 <div class="right-pane">
 <div id="budgetter!" class="content-section">
     <h2>Budgetter</h2>
@@ -242,20 +145,38 @@ pre {
 </div>
 
 <script>
-    const navItems = document.querySelectorAll('.nav-item');
-    const contentSections = document.querySelectorAll('.content-section');
+// Variables for burger menu functionality
+const burgerMenu = document.getElementById('burger-menu');
+const navItemsContainer = document.getElementById('nav-items'); // Container for nav items
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const sectionId = item.dataset.section;
+// Toggle the menu on small screens
+burgerMenu.addEventListener('click', () => {
+    navItemsContainer.classList.toggle('active');
+});
 
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-            });
+// Variables for section navigation
+const navItems = document.querySelectorAll('.nav-item'); // Individual nav items
+const contentSections = document.querySelectorAll('.content-section');
 
-            document.getElementById(sectionId).classList.add('active');
+// Handle section navigation
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const sectionId = item.dataset.section;
+
+        // Hide all content sections
+        contentSections.forEach(section => {
+            section.classList.remove('active');
         });
+
+        // Show the selected content section
+        document.getElementById(sectionId).classList.add('active');
+
+        // Collapse the menu on small screens after clicking an item
+        if (window.innerWidth <= 768) {
+            navItemsContainer.classList.remove('active');
+        }
     });
+});
 </script>
 
 </body>
