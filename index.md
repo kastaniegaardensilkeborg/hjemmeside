@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Navigation</title>
+    <style>
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 5px 10px;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="products.html">Products</a>
+    </nav>
+
+    </body>
+</html>
+
 # A/B Kastaniegården
 
 Velkommen til Kastaniegården.
