@@ -4,7 +4,7 @@ body {
     flex-direction: row;
     min-height: 100vh;
     margin: 0 auto; /* Centrer indholdet vandret */
-    max-width: 80%; /* Begræns bredden til 80% */
+    max-width: 75%; /* Begræns bredden til 75% */
     background-color: white;
     color: #333;
     font-size: 120%;
