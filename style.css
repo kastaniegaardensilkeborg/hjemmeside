@@ -156,10 +156,10 @@ pre {
     outline-offset: 2px;
 }
 
-/* Styling for billeder i hovedindholdet (right-pane) */
+/* More noticeable drop shadow for images in the main content area */
 .right-pane img {
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow intensity */
     max-width: 100%;
     height: auto;
 }
