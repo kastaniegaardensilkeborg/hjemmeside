@@ -28,7 +28,7 @@ body {
     color: #a0a6ac;
     margin-bottom: 20px;
     line-height: 1.4;
-    text-align: center; /* Center the text */
+    padding-left: 15px; /* Align with menu items */
 }
 
 .right-pane {
