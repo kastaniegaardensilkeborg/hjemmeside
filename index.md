@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Styled Navigation</title>
-    <style>
-        nav {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            padding: 5px 10px;
-            color: #333;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="products.html">Products</a>
-    </nav>
-
-    </body>
-</html>
+<nav>
+  <a href="index.html">Akut håndværkerliste</a> |
+  <a href="index.html">Gaver</a> |
+  <a href="index.html">Køb og salg</a> |
+  <a href="index.html">Mødereferater</a> |
+  <a href="index.html">Om Kastaniegården</a> |
+  <a href="index.html">Regnskaber</a> |
+  <a href="index.html">Vedligeholdelseskatalog</a> |
+  <a href="index.html">Vedtægter</a> |
+  <a href="index.html">Velkommen til Kastaniegården</a>
+</nav>
 
 # A/B Kastaniegården
 
