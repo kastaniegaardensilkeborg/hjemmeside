@@ -3,8 +3,8 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
-    margin: 0 auto; /* Centrer indholdet vandret */
-    max-width: 75%; /* Begræns bredden til 75% */
+    margin: 0 auto;
+    max-width: 80%;
     background-color: white;
     color: #333;
     font-size: 120%;
@@ -36,8 +36,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.nav-item:hover {
-    background-color: #f3f4f6;
+.nav-item:hover, .nav-item.active { /* Tilføjet .nav-item.active */
+    background-color: #0969da; /* Mørkere baggrund ved hover og aktiv */
+    color: white; /* Hvid tekst for maksimal kontrast */
 }
 
 .content-section {
@@ -90,13 +91,14 @@ pre {
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        max-width: 100%; /* Fyld hele bredden på små skærme */
+        max-width: 100%;
     }
 
     .left-pane {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #d0d7de;
+        padding: 10px; /* Reducer padding på små skærme */
     }
 
     .right-pane {
@@ -104,11 +106,20 @@ pre {
     }
 
     #burger-menu {
-        display: block;
+        display: flex; /* Vis burger menu som flex container for at tilføje tekst */
+        align-items: center; /* Centrerer ikonet og tekst vertikalt */
+    }
+
+    #burger-menu::before { /* Tilføj tekst til burger menu */
+        content: "Menu";
+        margin-right: 10px; /* Plads mellem tekst og ikon */
+        font-size: 16px;
     }
 
     #nav-items {
         display: none;
+        max-height: 300px; /* Begræns menu højde på små skærme */
+        overflow-y: auto; /* Tilføj scrollbar hvis menuen er for lang */
     }
 
     #menu-toggle:checked ~ #nav-items {
@@ -120,11 +131,11 @@ pre {
     }
 }
 
-@media (max-width: 480px){
-    .left-pane{
+@media (max-width: 480px) {
+    .left-pane {
         padding: 15px 10px;
     }
-    .right-pane{
+    .right-pane {
         padding: 15px;
     }
 }
