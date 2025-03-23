@@ -4,17 +4,17 @@ body {
     flex-direction: row;
     min-height: 100vh;
     margin: 0;
-    background-color: #f8f9fa;
+    background-color: #e3f2fd; /* Lys blå baggrund */
     color: #333;
     font-size: 120%;
 }
 
 .left-pane {
     width: 280px;
-    background-color: #e9ecef;
+    background-color: #bbdefb; /* Lysere blå panel */
     padding: 80px 20px;
     box-sizing: border-box;
-    border-right: 1px solid #dee2e6;
+    border-right: 1px solid #90caf9; /* Mørkere blå border */
 }
 
 .right-pane {
@@ -29,14 +29,15 @@ body {
     padding: 12px 15px;
     margin-bottom: 5px;
     text-decoration: none;
-    color: #495057;
+    color: #1976d2; /* Blå tekst */
     cursor: pointer;
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
 
 .nav-item:hover {
-    background-color: #d1d5db;
+    background-color: #90caf9; /* Lysere blå hover */
+    color: white; /* Hvid tekst ved hover for kontrast */
 }
 
 .content-section {
@@ -49,7 +50,7 @@ body {
 }
 
 h1, h2 {
-    color: #212529;
+    color: #1565c0; /* Mørkere blå overskrifter */
     margin-bottom: 20px;
 }
 
@@ -59,7 +60,7 @@ p, pre {
 }
 
 a {
-    color: #007bff;
+    color: #0d47a1; /* Endnu mørkere blå links */
     text-decoration: none;
 }
 
@@ -68,7 +69,7 @@ a:hover {
 }
 
 pre {
-    background-color: #f1f3f5;
+    background-color: #e8f5e9; /* Lys grønlig baggrund for kodeblokke for kontrast */
     padding: 10px;
     border-radius: 4px;
     overflow-x: auto;
@@ -83,6 +84,7 @@ pre {
     cursor: pointer;
     padding: 10px;
     font-size: 24px;
+    color: #1976d2; /* Blå burger menu ikon */
 }
 
 @media (max-width: 768px) {
@@ -93,7 +95,7 @@ pre {
     .left-pane {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #dee2e6;
+        border-bottom: 1px solid #90caf9;
     }
 
     .right-pane {
@@ -124,4 +126,9 @@ pre {
     .right-pane{
         padding: 15px;
     }
+}
+
+.nav-item:focus {
+    outline: 2px solid #0d47a1; /* Mørkere blå fokus stil */
+    outline-offset: 2px;
 }
