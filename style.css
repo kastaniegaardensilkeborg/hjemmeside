@@ -16,6 +16,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-right: 1px solid #d0d7de;
+    overflow-x: hidden; /* Force hide any horizontal overflow */
 }
 
 #menu-logo {
@@ -29,6 +30,7 @@ body {
     margin-bottom: 20px;
     line-height: 1.4;
     padding-left: 15px;
+    box-sizing: border-box; /* ensure padding is inside width */
 }
 
 .right-pane {
@@ -48,7 +50,7 @@ body {
     border-radius: 6px;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
-    width: 100%; /* Force 100% width on nav items */
+    width: 100%;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -118,6 +120,7 @@ pre {
         display: flex;
         align-items: center;
         box-sizing: border-box;
+        overflow-x: hidden; /* Force hide any horizontal overflow */
     }
 
     #menu-logo {
@@ -128,6 +131,7 @@ pre {
 
     #address-info {
         display: none;
+        box-sizing: border-box; /* ensure padding is inside width */
     }
 
     #burger-menu {
@@ -148,8 +152,9 @@ pre {
         margin-top: 10px;
         width: 100%;
         box-sizing: border-box;
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margins */
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden; /* Force hide any horizontal overflow */
     }
 
     #menu-toggle:checked ~ #nav-items {
