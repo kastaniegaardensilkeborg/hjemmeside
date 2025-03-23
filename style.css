@@ -156,10 +156,10 @@ pre {
     outline-offset: 2px;
 }
 
-/* Styling for billeder med afrundede hjørner og skygge */
-img {
-    border-radius: 8px; /* Afrundede hjørner */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Let skygge */
-    max-width: 100%; /* Sørg for at billeder er responsive */
+/* Styling for billeder i hovedindholdet (right-pane) */
+.right-pane img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
     height: auto;
 }
