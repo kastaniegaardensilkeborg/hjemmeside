@@ -194,6 +194,11 @@ pre {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     height: auto;
-    display: block; /* Make it a block-level element */
-    margin: 0 auto; /* Center horizontally */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Removes link styling from logo */
+.left-pane a {
+    text-decoration: none;
 }
