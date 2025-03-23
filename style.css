@@ -25,9 +25,10 @@ body {
 
 #address-info {
     font-size: 14px;
-    color: #a0a6ac; /* Faded color */
+    color: #a0a6ac;
     margin-bottom: 20px;
     line-height: 1.4;
+    text-align: center; /* Center the text */
 }
 
 .right-pane {
@@ -122,7 +123,7 @@ pre {
     }
 
     #address-info {
-        display: none; /* Hide on small screens */
+        display: none;
     }
 
     #burger-menu {
