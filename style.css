@@ -143,6 +143,7 @@ pre {
         overflow-y: auto;
         margin-top: 10px;
         width: 100%;
+        box-sizing: border-box; /* Ensure padding/borders are included in width */
     }
 
     #menu-toggle:checked ~ #nav-items {
