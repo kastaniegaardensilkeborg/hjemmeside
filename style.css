@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Change to column for footer */
     min-height: 100vh;
     margin: 0 auto;
     max-width: 60%;
@@ -21,14 +21,6 @@ body {
 #menu-logo {
     width: 100%;
     margin-bottom: 20px;
-}
-
-#address-info {
-    font-size: 14px;
-    color: #a0a6ac;
-    margin-bottom: 20px;
-    line-height: 1.4;
-    padding-left: 15px; /* Align with menu items */
 }
 
 .right-pane {
@@ -123,7 +115,7 @@ pre {
     }
 
     #address-info {
-        display: none;
+        display: none; /* Hide on small screens */
     }
 
     #burger-menu {
@@ -174,4 +166,21 @@ pre {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     height: auto;
+}
+
+/* Styling for the footer */
+footer {
+    width: 100%; /* Footer takes full width */
+    background-color: #f6f8fa; /* Match menu background */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #d0d7de; /* Match menu border */
+}
+
+#address-info {
+    font-size: 14px;
+    color: #a0a6ac;
+    line-height: 1.4;
+    margin: 0 auto; /* Center info horizontally */
+    max-width: 80%; /* Limit the width of info */
 }
