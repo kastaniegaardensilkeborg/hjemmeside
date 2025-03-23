@@ -8,7 +8,7 @@ body {
     background-color: white;
     color: #333;
     font-size: 120%;
-    overflow-x: hidden; /* Prevent body overflow, just in case */
+    overflow-x: hidden;
 }
 
 .left-pane {
@@ -33,7 +33,7 @@ body {
     line-height: 1.4;
     padding-left: 15px;
     box-sizing: border-box;
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%;
 }
 
 .right-pane {
@@ -54,7 +54,7 @@ body {
     transition: background-color 0.3s ease;
     box-sizing: border-box;
     width: 100%;
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -132,13 +132,13 @@ pre {
         margin-bottom: 0;
         margin-right: 10px;
         box-sizing: border-box;
-        max-width: 100%; /* Ensure it doesn't overflow */
+        max-width: 100%;
     }
 
     #address-info {
         display: none;
         box-sizing: border-box;
-        max-width: 100%; /* Ensure it doesn't overflow */
+        max-width: 100%;
     }
 
     #burger-menu {
@@ -162,7 +162,7 @@ pre {
         padding: 0;
         margin: 0;
         overflow-x: hidden;
-        max-width: 100%; /* Ensure it doesn't overflow */
+        max-width: 100%;
     }
 
     #menu-toggle:checked ~ #nav-items {
@@ -188,10 +188,12 @@ pre {
     outline-offset: 2px;
 }
 
-/* More noticeable drop shadow for images in the main content area */
+/* Centering Images in the right-pane */
 .right-pane img {
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     height: auto;
+    display: block; /* Make it a block-level element */
+    margin: 0 auto; /* Center horizontally */
 }
