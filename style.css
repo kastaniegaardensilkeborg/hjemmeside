@@ -47,6 +47,7 @@ body {
     cursor: pointer;
     border-radius: 6px;
     transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding/borders are included in width */
 }
 
 .nav-item:hover, .nav-item.active {
@@ -105,6 +106,7 @@ pre {
     body {
         flex-direction: column;
         max-width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scroll on body */
     }
 
     .left-pane {
@@ -114,6 +116,7 @@ pre {
         padding: 10px;
         display: flex;
         align-items: center;
+        box-sizing: border-box; /* Ensure padding/borders are included in width */
     }
 
     #menu-logo {
