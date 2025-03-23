@@ -1,0 +1,48 @@
+/* print.css */
+
+/* Print stylesheet */
+body {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+}
+
+.left-pane {
+    display: none;
+}
+
+.right-pane {
+    padding: 0;
+    font-size: 10pt;
+}
+
+.right-pane img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.nav-item {
+    display: none;
+}
+
+#address-info {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#menu-toggle, #burger-menu, a {
+    display: none;
+}
+
+a[href]::after {
+    content: " (" attr(href) ") ";
+}
+
+.right-pane img{
+    box-shadow: none;
+}
