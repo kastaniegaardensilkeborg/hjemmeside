@@ -4,7 +4,7 @@ body {
     flex-direction: row;
     min-height: 100vh;
     margin: 0 auto;
-    max-width: 60%; /* Adjusted to 60% */
+    max-width: 60%;
     background-color: white;
     color: #333;
     font-size: 120%;
@@ -21,6 +21,13 @@ body {
 #menu-logo {
     width: 100%;
     margin-bottom: 20px;
+}
+
+#address-info {
+    font-size: 14px;
+    color: #a0a6ac; /* Faded color */
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .right-pane {
@@ -112,6 +119,10 @@ pre {
         width: 50px;
         margin-bottom: 0;
         margin-right: 10px;
+    }
+
+    #address-info {
+        display: none; /* Hide on small screens */
     }
 
     #burger-menu {
