@@ -4,7 +4,7 @@ body {
     flex-direction: row;
     min-height: 100vh;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 60%; /* Adjusted to 60% */
     background-color: white;
     color: #333;
     font-size: 120%;
@@ -159,7 +159,7 @@ pre {
 /* More noticeable drop shadow for images in the main content area */
 .right-pane img {
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow intensity */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     height: auto;
 }
