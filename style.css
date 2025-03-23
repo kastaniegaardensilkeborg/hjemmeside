@@ -8,6 +8,7 @@ body {
     background-color: white;
     color: #333;
     font-size: 120%;
+    overflow-x: hidden; /* Prevent body overflow, just in case */
 }
 
 .left-pane {
@@ -16,12 +17,13 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-right: 1px solid #d0d7de;
-    overflow-x: hidden; /* Force hide any horizontal overflow */
+    overflow-x: hidden;
 }
 
 #menu-logo {
     width: 100%;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 #address-info {
@@ -30,7 +32,8 @@ body {
     margin-bottom: 20px;
     line-height: 1.4;
     padding-left: 15px;
-    box-sizing: border-box; /* ensure padding is inside width */
+    box-sizing: border-box;
+    max-width: 100%; /* Ensure it doesn't overflow */
 }
 
 .right-pane {
@@ -51,6 +54,7 @@ body {
     transition: background-color 0.3s ease;
     box-sizing: border-box;
     width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow */
 }
 
 .nav-item:hover, .nav-item.active {
@@ -120,18 +124,21 @@ pre {
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        overflow-x: hidden; /* Force hide any horizontal overflow */
+        overflow-x: hidden;
     }
 
     #menu-logo {
         width: 50px;
         margin-bottom: 0;
         margin-right: 10px;
+        box-sizing: border-box;
+        max-width: 100%; /* Ensure it doesn't overflow */
     }
 
     #address-info {
         display: none;
-        box-sizing: border-box; /* ensure padding is inside width */
+        box-sizing: border-box;
+        max-width: 100%; /* Ensure it doesn't overflow */
     }
 
     #burger-menu {
@@ -154,7 +161,8 @@ pre {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        overflow-x: hidden; /* Force hide any horizontal overflow */
+        overflow-x: hidden;
+        max-width: 100%; /* Ensure it doesn't overflow */
     }
 
     #menu-toggle:checked ~ #nav-items {
